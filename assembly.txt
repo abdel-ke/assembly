@@ -1,4 +1,28 @@
-DATA REGISTERS
+<--------------------Basic syntax------------------>
+data		:	The data section is used for declaring initialized data or constants;
+	declaring =>	section.data
+bss, and	:	The bss section is used for declaring variables
+	declaring =>	section.bss
+text		:	like main
+	declaring =>	section.text
+   						global _start
+					_start:
+<-----------Assembly Language Statements----------->
+
+MOV		move data from one location to another
+ADD		add two values
+SUB		subtract a value from another value
+PUSH 	push data onto a stack
+POP		pop data from a stack
+JMP		jump to another location
+INT		interrupt a process
+MSG		show a message
+
+mov a, 3
+mov b, 5
+add a, b, c
+
+<--------------------DATA REGISTERS------------------>
 	=>  8-bit	data registers: AH, AL, BH, BL, CH, CL, DH, and DL.
 	=>  16-bit	data registers: AX, BX, CX and DX.
 	=>  32-bit	data registers: EAX, EBX, ECX, EDX.
@@ -23,7 +47,7 @@ DATA REGISTERS
 		It is also used with AX register along with DX for multiply
 		and divide operations involving large values.
 
-POINTER REGISTERS
+<--------------------POINTER REGISTERS------------------>
 	The pointer registers are 32-bit EIP, ESP, and EBP registers
 		and corresponding 16-bit right portions IP, SP, and BP.
 	There are three categories of pointer registers
@@ -43,5 +67,4 @@ POINTER REGISTERS
 		The address in SS register is combined with the offset in BP to get the location of the parameter.
 		BP can also be combined with DI and SI as base register for special addressing.
 
-INDEX REGISTERS
-	
+<--------------------INDEX REGISTERS------------------>
