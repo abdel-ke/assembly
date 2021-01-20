@@ -62,7 +62,7 @@ void	get_w_p(char *str)
 	prc = ft_atoi(str);
 }
 
-void	print_z_sp()
+void	print_z_sp(int len)
 {
 	while (width > prc && width > len)
 	{
@@ -112,7 +112,7 @@ void	ft_print_d(char *str, va_list pa)
 		d *= -1;
 		width--;
 	}
-	print_z_sp();
+	print_z_sp(len);
 	ft_putnbr(d);
 }
 
@@ -122,7 +122,7 @@ void	ft_print_x(char *str, va_list pa)
 	x = va_arg(pa, unsigned int);
 	lenx = len_x(x);
 	get_w_p(str);
-	print_z_sp();
+	print_z_sp(lenx);
 	ft_puthex(x);
 }
 
@@ -154,14 +154,14 @@ int		ft_printf(char *str, ...)
 int main()
 {
 	int x , y;
-	   x = printf("|%2.4x|\n", 123456);
-	y = ft_printf("|%2.4x|\n", 123456);
+	   x = printf("|%2.4x|\n", 12);
+	y = ft_printf("|%2.4x|\n", 12);
 	printf("\t|%d|===========|%d|\n", x, y);
 	   x = printf("|%2.6x|\n", 1234);
 	y = ft_printf("|%2.6x|\n", 1234);
 	printf("\t|%d|===========|%d|\n", x, y);
-	   x = printf("|%4.2x|\n", 123456);
-	y = ft_printf("|%4.2x|\n", 123456);
+	   x = printf("|%4.2x|\n", 12);
+	y = ft_printf("|%4.2x|\n", 12);
 	printf("\t|%d|===========|%d|\n", x, y);
 	   x = printf("|%4.6x|\n", 12);
 	y = ft_printf("|%4.6x|\n", 12);
