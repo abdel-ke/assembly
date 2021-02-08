@@ -10,19 +10,17 @@ int main(void)
 }*/
 
 
-int        ft_strlen(char *str)
-{
-    int i = 0;
-    while (str[i++]);
-    return (0);
-}
+int        ft_strlen(char *str);
+// {
+//     int i = 0;
+//     while (str[i++]);
+//     return (0);
+// }
 
 int main() {
   char *h = "hamid";
   char *s2 = "elkemmal";
-  char *new;
-  
-  new = malloc(sizeof(char) * (ft_strlen(h) + ft_strlen(s2)));
-  puts("new");
+
+  printf("|%d|\n", ft_strlen(h));
   return 0;
 }
