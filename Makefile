@@ -2,11 +2,11 @@ NAME = libasm
 
 NAME_LIB = libasm.a
 
-SRCS = ft_strcpy.s
-	# hello.s\
+SRCS =	ft_strcpy.s\
+		ft_strlen.s\
+		ft_strcmp.s
 
 NASM = nasm
-
 NASMFLAGS = -f macho64
 
 OBJ = $(SRCS:.s=.o)
@@ -18,12 +18,10 @@ all : $(NAME)
 
 $(NAME) : $(OBJ)
 	ar rcs $(NAME_LIB) $(OBJ)
-	gcc main.c hello.o -o strlen
+	@echo "\n\x1b[32mResult"
 ccproject :
 	$(CC) $(CFLAGS) main.c $(NAME_LIB)
-	
+
 clean :
-	rm -f $(OBJ)
-	rm -f strlen
-	rm -f $(NAME_LIB)
+	@rm -f $(OBJ) main $(NAME_LIB)
 re : clean all
