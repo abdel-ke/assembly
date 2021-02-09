@@ -1,9 +1,13 @@
 #include <stdio.h>
+#include <string.h>
 
-int        ft_strlen(char *str);
+int		ft_strlen(char *str);
+// char	*ft_strcpy(char *dest, char *src);
+
 int main() {
-  char *s2 = "abdelhamid el kemmal";
-
-  printf("|%d|\n", ft_strlen(s2));
-  return 0;
+	// char *str;
+	// ft_strcpy(str, "|abdel-ke|");
+	// puts(str);
+	printf("|%d|\n", ft_strlen("hamid"));
+	return 0;
 }
