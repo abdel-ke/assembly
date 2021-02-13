@@ -1,4 +1,4 @@
-nasm -f macho64 hello.s -o hello.o
-clang main.c hello.o -o test 
+nasm -f macho64 $1 -o test.o
+clang main.c test.o -o test 
 ./test
 rm *.o test
