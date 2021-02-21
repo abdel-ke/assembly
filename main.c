@@ -25,6 +25,6 @@ int main() {
 	// char 	*new;
 	// read(fd, new, 50);
 	// ft_write(1, new, 50);
-	printf("|%s|\n", ft_strdup("hamid"));
+	printf("|%s|\n", ft_strdup("Abdelhamid EL KEMMAL"));
 	return 0;
 }
